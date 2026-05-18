@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Parallax | Interactive Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tooplate-living-parallax.css">
+<!--
+
+Tooplate 2150 Living Parallax
+
+https://www.tooplate.com/view/2150-living-parallax
+
+Free HTML CSS Template
+
+-->
+</head>
+<body>
+    <!-- UI Toggle Button - Always Visible -->
+    <button class="ui-toggle-btn" id="uiToggleBtn" aria-label="Toggle UI Visibility">
+        <svg viewBox="0 0 24 24" id="eyeIcon">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+        </svg>
+    </button>
+
+    <!-- Header -->
+    <header class="ui-element">
+        <div class="logo">My e-Portfolio</div>
+        <nav id="mainNav">
+            <a onclick="openOverlay('about')">Philosopy</a>
+            <a onclick="openOverlay('testimonials')">List of Tools</a>
+            <a onclick="openOverlay('contact')">Contact</a>
+            <button class="fullscreen-btn" id="fullscreenBtn" aria-label="Toggle Fullscreen">
+                <svg viewBox="0 0 24 24">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                </svg>
+            </button>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Slider -->
+    <div class="slider-wrapper">
+        <div class="slider-container" id="slider">
+            <!-- Slide 1 -->
+            <div class="slide active" data-index="0">
+                <div class="parallax-layer background-layer">
+                    <img src="1.png" alt="Mountains">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Jaspher Jay C. Bayot</h2>
+                    <p>A person with 47 responsibilities.</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide" data-index="1">
+                <div class="parallax-layer background-layer">
+                    <img src="2.png" alt="Forest">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>2nd year - BSED</h2>
+                    <p>A 2nd year student under the program of Bachelor of Secondary Education - Major in Science</p>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide" data-index="2">
+                <div class="parallax-layer background-layer">
+                    <img src="3.png" alt="Ocean">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>A Future Educator</h2>
+                    <p>Shape minds, and mold hearts.</p>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide" data-index="3">
+                <div class="parallax-layer background-layer">
+                    <img src="4.png" alt="Sunset">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Multiple Me</h2>
+                    <p>A student, a student-leader, an athlete, a performer all in one.</p>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide" data-index="4">
+                <div class="parallax-layer background-layer">
+                    <img src="5.png" alt="Flowers">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Ideology</h2>
+                    <p>"The Happiness of your life depends upon the quality of your thoughts"</p>
+                </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="slide" data-index="5">
+                <div class="parallax-layer background-layer">
+                    <img src="6.png" alt="Desert">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>And I also believe that...</h2>
+                    <p>“There is only one way to happiness, and that is to cease worrying about things which are beyond the power of our will.”</p>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="nav-arrow prev ui-element">‹</div>
+            <div class="nav-arrow next ui-element">›</div>
+
+            <!-- Dots -->
+            <div class="dots-container ui-element">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+                <span class="dot" data-slide="4"></span>
+                <span class="dot" data-slide="5"></span>
+                <span class="dot" data-slide="6"></span>
+            </div>
+        </div>
+    </div>
+
+    <section class="about-section">
+    <div class="about-container">
+        <h1>About Me</h1>
+
+        <p>
+	Hi! I am Jaspher Jay C. Bayot, a 2nd year Bachelor of Secondary Education major in Science student. I am passionate about teaching, leadership, performing arts, and continuous growth.
+	</p>
+
+	<p>
+	My story began way back in my childhood, where curiosity was already a part of me. I was always the kind of kid who would ask “why” and “how” about almost everything I saw around me. I loved exploring things, breaking them down, and understanding how they work.
+	</p>
+
+	<p>
+	As I grew older, that curiosity naturally led me into the world of technology. What started as simple exploration slowly became a deeper interest, something I continuously learn from and improve on. It opened my mind to new possibilities and ways of thinking that I never imagined before.
+	</p>
+
+	<p>
+	Today, I see this journey as part of my path toward becoming a future educator. I believe that the same curiosity and passion I have for exploring technology can be used to create more engaging and meaningful learning experiences for students.
+	</p>
+
+	<p>
+	As a future educator, I believe that education is not only about teaching lessons but also about shaping minds and inspiring students to become better individuals.
+	</p>
+
+	<p>
+	Beyond academics, I actively participate in organizations, performances, and various activities that help me develop my confidence, discipline, and creativity.
+	</p>
+
+	<h1>Course Reflection</h1>
+
+	<p>
+	As my journey continued into my Bachelor of Secondary Education program, I was introduced to the world of Educational Technology. Throughout this course, I learned many valuable concepts and skills related to how technology can be meaningfully integrated into teaching and learning.
+	</p>
+
+	<p>
+	At first, I found some topics quite challenging, especially when dealing with unfamiliar digital tools and understanding how they can be effectively applied in classroom instruction and assessment. There were moments when I struggled with new applications and technology-based activities, but through consistent practice, exploration, and guidance, I gradually gained confidence.
+	</p>
+
+	<p>
+	This course helped me realize that technology in education goes beyond gadgets and software. It is about enhancing the learning experience, encouraging student engagement, and making lessons more meaningful, interactive, and accessible. My understanding of educational technology evolved from seeing it as a support tool to recognizing it as an essential part of modern teaching and learning.
+	</p>
+
+	<p>
+	One of the most valuable lessons I gained from this course is the importance of creativity, adaptability, and responsible use of technology in the classroom. I also learned how digital resources can strengthen collaboration, communication, and critical thinking among learners. Through various activities, projects, and discussions, I discovered practical ways to integrate technology into lesson planning, classroom management, and student assessment.
+	</p>
+	
+	<p>
+	Looking ahead, I hope to apply the knowledge and skills I have gained in real classroom settings. My goal is to create interactive, student-centered, and engaging learning environments where technology is used effectively to support meaningful learning outcomes. I also aim to continuously improve my digital literacy so I can adapt to the fast-changing world of educational technology and grow into a more innovative and effective educator.
+	</p>
+  <br>
+    <p>“This portfolio is a reflection of my journey in exploring and understanding the role of technology in education, showcasing the knowledge, skills, and experiences I gained throughout the course.”</p>
+</br>
+   <div class="photo-gallery" id="pic">
+
+    <a href="#img1" class="photo-card">
+        <img src="g1.jpg" alt="">
+        <div class="photo-caption">My First Integration to Technology (Digital Art)</div>
+    </a>
+
+    <a href="#img2" class="photo-card">
+        <img src="g4.png" alt="">
+        <div class="photo-caption">Example of a Collaborative Tool that we used.</div>
+    </a>
+
+    <a href="#img3" class="photo-card">
+        <img src="g5.png" alt="">
+        <div class="photo-caption">A tool which we can create or organize classes</div>
+    </a>
+
+    <a href="#img4" class="photo-card">
+        <img src="g2.png" alt="">
+        <div class="photo-caption">This is where I design and create digital content</div>
+    </a>
+
+    <a href="#img5" class="photo-card">
+        <img src="g3.png" alt="">
+        <div class="photo-caption">I learned this from my Grade 7 teacher. (coding) AndI applied it in making this portfolio.</div>
+    </a>
+
+</div>
+
+<!-- POPUPS -->
+
+<div id="img1" class="lightbox">
+    <a href="#pic" class="close-btn">← Back</a>
+    <img src="g1.jpg">
+</div>
+
+<div id="img2" class="lightbox">
+    <a href="#pic" class="close-btn">← Back</a>
+    <img src="g4.png">
+</div>
+
+<div id="img3" class="lightbox">
+    <a href="#pic" class="close-btn">← Back</a>
+    <img src="g5.png">
+</div>
+
+<div id="img4" class="lightbox">
+    <a href="#pic" class="close-btn">← Back</a>
+    <img src="g2.png">
+</div>
+
+<div id="img5" class="lightbox">
+    <a href="#pic" class="close-btn">← Back</a>
+    <img src="g3.png">
+</div>
+
+</section> 
+
+    <!-- Global Parallax Shapes -->
+    <div class="parallax-shape shape-1 ui-element"></div>
+    <div class="parallax-shape shape-2 ui-element"></div>
+
+    <!-- Play/Pause Button -->
+    <button class="play-pause-btn ui-element" id="playPauseBtn" aria-label="Play/Pause Slideshow">
+        <svg viewBox="0 0 24 24">
+            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+        </svg>
+    </button>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar-container ui-element">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Duration Controls -->
+    <div class="duration-controls ui-element">
+        <button class="duration-btn" id="decreaseDuration" aria-label="Decrease Duration">−</button>
+        <div class="duration-display" id="durationDisplay">5<span>s</span></div>
+        <button class="duration-btn" id="increaseDuration" aria-label="Increase Duration">+</button>
+    </div>
+
+    <!-- About Overlay -->
+    <div class="overlay" id="aboutOverlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('about')">×</button>
+            <h2>Teaching Philosophy</h2>
+            <p>I believe that technology plays a vital role in transforming education into a more meaningful, inclusive, and engaging experience for learners. As a future educator, my teaching philosophy centers on the idea that students learn best when they are actively involved in the learning process and when they are given opportunities to explore, create, and collaborate using modern tools.</p>
+            <p>I strongly support student-centered learning, where learners are not just passive recipients of information but active participants in constructing their own understanding. Technology helps make this possible by providing interactive platforms, multimedia resources, and digital tools that allow students to learn at their own pace and in ways that suit their learning styles. Through this approach, I aim to encourage critical thinking, creativity, and independence among students.</p>
+            <p>I also believe in the importance of active learning, where students engage in discussions, problem-solving activities, and hands-on tasks supported by technology. Digital tools such as educational apps, virtual simulations, and online collaboration platforms can make lessons more dynamic and engaging. These tools help students connect classroom concepts to real-life situations, making learning more relevant and meaningful.
+                Another important aspect of my philosophy is equitable access to digital tools. I recognize that not all students have the same access to technology, so it is essential for educators to be mindful and inclusive when integrating digital learning. As a future teacher, I will strive to provide alternative learning materials and ensure that no learner is left behind due to limited access to devices or internet connectivity. Education should be fair, accessible, and supportive for everyone.</p>
+            <p><strong>My Vision For Future Classrooms</strong></p>
+            <p>In the future, I envision classrooms where technology makes learning more interactive, flexible, and student-centered. Lessons will go beyond traditional teaching through tools like smart boards, virtual reality, and online platforms that make subjects more engaging and easier to understand.</p>
+            <p>Students will actively participate in their learning through research, digital activities, and collaboration, while teachers will act as guides who support and facilitate learning. Technology will also allow personalized learning, helping students learn at their own pace and meet their individual needs.</p>
+            <p>Overall, future classrooms will be more inclusive, connected, and accessible, creating a learning environment that prepares students for a technology-driven world.</p>
+        </div>
+    </div>
+
+    <!-- Testimonials Overlay -->
+    <div class="overlay" id="testimonialsOverlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('testimonials')">×</button>
+            <h2>LIST OF TOOLS</h2>
+            
+            <div class="testimonial-card">
+                <p class="author">Learning Management System (LMS)</p>
+                <p>"A Learning Management System (LMS) is a software platform used to create, deliver, manage, and track learning content and student progress. It is commonly used in schools, universities, and training programs."</p>
+                <p class="author">Example</p>
+                <p><a href="https://classroom.google.com/" rel="nofollow" target="_blank">Google Classroom</a></p>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="author">Collaborative Learning Tool</p>
+                <p>"A collaborative learning tool is a digital tool that allows students or learners to work together, share ideas, and complete tasks as a group, even if they are not in the same place."</p>
+                <p class="author">Example</p>
+                <p><a href="https://www.zoom.com/" rel="nofollow" target="_blank">Zoom</a></p>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="author">Interactive Learning Tool</p>
+                <p>"An interactive learning tool is a digital tool that allows learners to actively engage with lessons through activities, quizzes, games, or simulations instead of just reading or listening."</p>
+                <p class="author">Example</p>
+                <p><a href="https://nearpod.com/" rel="nofollow" target="_blank">Nearpod</a></p>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="author">Assessment Tool</p>
+                <p>"An assessment tool is a digital tool used to measure what learners know, understand, or can do through tests, quizzes, assignments, or activities."</p>
+                <p class="author">Example</p>
+                <p><a href="https://docs.google.com/forms/" rel="nofollow" target="_blank">Google Forms</a></p>
+            </div>
+        
+            <div class="testimonial-card">
+                <p class="author">Content Creation and Presentation tool</p>
+                <p>"A content creation and presentation tool is a digital tool used to create learning materials and present information in a clear and engaging way."</p>
+                <p class="author">Example</p>
+                <p><a href="https://www.canva.com/" rel="nofollow" target="_blank">Canva</a></p>
+            </div>
+        
+            <div class="testimonial-card">
+                <p class="author">Adaptive Learning Tool</p>
+                <p>"An adaptive learning tool is an educational technology system that adjusts what you learn based on how you perform in real time."</p>
+                <p class="author">Example</p>
+                <p><a href="https://www.khanacademy.org/" rel="nofollow" target="_blank">Khan Academy</a></p>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="author">Gamification Tool</p>
+                <p>"A gamification tool is a digital platform that incorporates game design elements into non-game contexts to increase engagement and motivation."</p>
+                <p class="author">Example</p>
+                <p><a href="https://www.kahoot.it/" rel="nofollow" target="_blank">Kahoot!</a></p>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="author">Educational Website</p>
+                <p>"An educational website is a digital platform that provides learning resources, courses, and information on various subjects."</p>
+                <p class="author">Example</p>
+                <p><a href="https://www.coursera.org/" rel="nofollow" target="_blank">Coursera</a></p>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="author">Educational Application</p>
+                <p>"An educational application is a software program designed to facilitate learning and provide interactive educational experiences."</p>
+                <p class="author">Example</p>
+                <p><a href="https://www.duolingo.com/" rel="nofollow" target="_blank">Duolingo</a></p>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="author">Virtual Reality and Simulation Tools</p>
+                <p>"Virtual reality and simulation tools are digital platforms that create immersive learning experiences by allowing users to interact with 3D environments or realistic scenarios."</p>
+                <p class="author">Example</p>
+                <p><a href="https://phet.colorado.edu/" rel="nofollow" target="_blank">PhET Interactive Simulations</a></p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Contact Overlay -->
+    <div class="overlay" id="contactOverlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('contact')">×</button>
+            <h2>Contact Us</h2>
+            <p>Have a question or want to know me more? I'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.</p>
+            
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Your name" required>
+                
+                <label>Email</label>
+                <input type="email" name="email" placeholder="your.email@example.com" required>
+                
+                <label>Subject</label>
+                <input type="text" name="subject" placeholder="What's this about?" required>
+                
+                <label>Message</label>
+                <textarea name="message" placeholder="Tell us more..." required></textarea>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            
+            <div class="contact-address">
+                <h3>Visit Us</h3>
+                <p>Purok-2 Sampaguita, Poblacion<br>
+                Tagbina, Surigao del Sur<br>
+                Philippines<br>
+                <a href="tel:+639167044655">+63 916 704 4655</a> | <a href="mailto:4pollo.desu.ii11@gmail.com">4pollo.desu.ii11@gmail.com</a></p>
+            </div>
+            
+            <div class="map-container">
+          <iframe
+              src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d493.30405710835373!2d126.1596339!3d8.457257!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1779115528152!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              allowfullscreen=""
+              loading="lazy"
+             referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        </div>
+    </div>
+
+    <!-- Privacy Overlay -->
+    <div class="overlay" id="privacyOverlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('privacy')">×</button>
+            <h2>Disclaimer</h2>
+            <p>The projects and materials featured in this portfolio are for demonstrative purposes only.</p>
+            <p>All intellectual property belongs to the respective owners and organizations.</p>
+            
+            <p>Any confidential information has been redacted or altered to comply with non-disclosure agreements.</p>
+            
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="ui-element">
+        <p>Copyright © 2026 Jaspher Jay C. Bayot | <a href="#" onclick="openOverlay('privacy'); return false;">Disclaimer</a> | My profile: <a href="https://www.facebook.com/XingsMan/" target="_blank">Click Here</a></p>
+    </footer>
+<script src="tooplate-living-scripts.js"></script>
+</body>
+</html>
